@@ -1,0 +1,14 @@
+<div class="container p-5">
+  <h1>See pet info</h1>
+
+  <p><strong>Name:</strong><%= @pet.name %></p>
+  <p><strong>Address:</strong><%= @pet.address %></p>
+  <p><strong>Species:</strong><%= @pet.species %></p>
+  <p><strong>Found_on:</strong><%= @pet.found_on %></p>
+
+  <p>
+    <%= link_to 'back', pets_path, class:'btn btn-primary' %>
+    <%= link_to 'update', edit_pet_path(@pet), class:'btn btn-secondary' %>
+    <%= link_to 'adopt', pet_path(@pet), data: { turbo_method: :delete, turbo_confirm: 'r u sure?' }, class:'btn btn-danger' %>
+  </p>
+</div>

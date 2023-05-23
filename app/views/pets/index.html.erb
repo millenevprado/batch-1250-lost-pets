@@ -1,0 +1,12 @@
+<div class="container p-5">
+  <h1 class="text-center">See all pets</h1>
+
+  <ul class="list-group">
+    <% @pets.each do |pet| %>
+      <li class="list-group-item"><%= link_to pet.name, pet_path(pet) %></li>
+    <% end %>
+  </ul>
+  <p class="mt-3">
+    <%= link_to 'add pet', pets_new_path, class:'btn btn-primary' %>
+  </p>
+</div>
